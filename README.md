@@ -1,14 +1,9 @@
 
 # COCO Pose Keypoint Identity Tracking — Overview
 
-This repository provides a robust pipeline for processing pose estimation data in COCO format, with a special focus on reliable multi-person identity tracking across video frames. The workflow includes:
+This repository provides a robust pipeline for processing pose estimation data in COCO format, with a special focus on reliable multi-person identity tracking across video frames. The workflow begins by extracting and cleaning keypoints from pose estimation JSON files. It then handles missing data and known occlusion periods by segmenting the data and filling in gaps accordingly. The core feature of the pipeline is the accurate tracking of up to three individuals, where consistent identities are assigned frame-by-frame using distance and similarity metrics. The tracked poses are visualized with color-coded identities, and manual correction of any misassignments is supported. This version is specifically created to handle three skeletons but can be adapted with some modifications to work for tracking four or more individuals. The end result is a clean, fully tracked, and identity-consistent dataset of pose keypoints, optimized for detailed analysis or further modeling.
 
-- Extracting and cleaning keypoints from pose estimation JSON files,
-- Handling missing data and known occlusion periods by segmenting and filling gaps,
-- Accurately tracking up to three individuals by assigning consistent identities frame-by-frame using distance and similarity metrics,
-- Visualizing tracked poses with color-coded identities and enabling manual correction of misassignments.
 
-The end result is a clean, fully tracked, and identity-consistent dataset of pose keypoints, optimized for detailed analysis or further modeling.
 # STEP A: COCO Pose Keypoint Processor
 
 This repository contains a Python script for processing pose estimation data in COCO format. It extracts keypoints from a JSON file, filters and reshapes the data, fills missing frames, and saves the cleaned result as a `.pkl` file.
