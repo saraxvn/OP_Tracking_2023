@@ -1,3 +1,14 @@
+
+# COCO Pose Keypoint Identity Tracking — Overview
+
+This repository provides a robust pipeline for processing pose estimation data in COCO format, with a special focus on reliable multi-person identity tracking across video frames. The workflow includes:
+
+- Extracting and cleaning keypoints from pose estimation JSON files,
+- Handling missing data and known occlusion periods by segmenting and filling gaps,
+- Accurately tracking up to three individuals by assigning consistent identities frame-by-frame using distance and similarity metrics,
+- Visualizing tracked poses with color-coded identities and enabling manual correction of misassignments.
+
+The end result is a clean, fully tracked, and identity-consistent dataset of pose keypoints, optimized for detailed analysis or further modeling.
 # STEP A: COCO Pose Keypoint Processor
 
 This repository contains a Python script for processing pose estimation data in COCO format. It extracts keypoints from a JSON file, filters and reshapes the data, fills missing frames, and saves the cleaned result as a `.pkl` file.
